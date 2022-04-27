@@ -13,13 +13,15 @@ const { NotImplementedError } = require('../extensions/index.js');
  * createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null]) => 'LOO'
  *
  */
-function createDreamTeam(members) {
-  if(!Array.isArray(members)){
+ function createDreamTeam(members) {
+  if (!Array.isArray(members)) {
     return false;
-  } else {
-    return members.filter((member) => typeof member === 'string').map((mamber) => member.trim([0]).toUpperCase()).sort().join("");
   }
+
+  return members.filter((member) => typeof member === "string").map((member) => member.trim()[0].toUpperCase()).sort().join("");
 }
+
+
 
 module.exports = {
   createDreamTeam
